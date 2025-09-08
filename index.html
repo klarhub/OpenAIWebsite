@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Input Console</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background grid -->
+  <div class="bg-grid"></div>
+
+  <main class="page">
+    <section class="card">
+      <header class="card__header">
+        <h2 class="card__title">Input Content</h2>
+        <button id="pasteBtn" class="btn btn--ghost" title="Paste">
+          Paste
+        </button>
+      </header>
+
+      <div class="card__body">
+        <textarea id="input" placeholder="Paste your text here, or drag and drop images/files..."></textarea>
+
+        <!-- Drop preview area (for images/files) -->
+        <div id="preview" class="preview hidden"></div>
+      </div>
+
+      <footer class="card__footer">
+        <div class="meta">
+          <span id="charCount">0</span> characters
+        </div>
+        <div class="meta">
+          <span class="dot dot--ok"></span>
+          Supports text and images
+        </div>
+      </footer>
+
+      <div class="card__actions">
+        <button id="solveBtn" class="btn btn--primary">
+          <span class="spinner" aria-hidden="true"></span>
+          Find Solution
+        </button>
+        <button id="clearBtn" class="btn btn--ghost">Clear</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- tiny toast -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
